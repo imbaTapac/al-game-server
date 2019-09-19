@@ -1,0 +1,6 @@
+**/out
+**/target
+**/classes
+**/myArtifact.iml
+**/.idea/**
+**.iml
