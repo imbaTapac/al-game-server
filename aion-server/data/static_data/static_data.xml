@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ai_static_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="static_data.xsd">
+    <npc_templates>
+        <import file="/npcs/npc_templates.xml"/>
+    </npc_templates>
+</ai_static_data>

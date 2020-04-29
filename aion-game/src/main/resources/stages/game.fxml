@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aion.game.controller.MainFormController">
+	<children>
+		<Button fx:id="attack" layoutX="138.0" layoutY="186.0" mnemonicParsing="false" onAction="#startAttack" text="Start Attack" />
+		<ProgressBar fx:id="progressBar" layoutX="67.0" layoutY="51.0" prefHeight="36.0" prefWidth="219.0" progress="0.0" />
+		<ListView fx:id="bossList" layoutX="339.0" layoutY="35.0" onMouseClicked="#onPressListElement" prefHeight="189.0" prefWidth="339.0" />
+		<Label fx:id="bossLabel" layoutX="473.0" layoutY="14.0" text="List of Bosses" />
+		<ProgressIndicator fx:id="progressIndicator" layoutX="162.0" layoutY="110.0" progress="0.0" />
+		<Text fx:id="bossName" layoutX="126.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="102.0">
+			<font>
+				<Font name="Arial Rounded MT Bold" size="12.0" />
+			</font>
+		</Text>
+		<Text fx:id="bossHP" layoutX="147.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="59.0">
+			<font>
+				<Font name="Arial Rounded MT Bold" size="12.0" />
+			</font>
+		</Text>
+		<TextArea fx:id="logView" layoutX="131.0" layoutY="277.0" prefHeight="197.0" prefWidth="443.0" />
+		<Label layoutX="323.0" layoutY="250.0" prefHeight="17.0" prefWidth="59.0" text="Log View" />
+      <Label fx:id="playerName" layoutX="14.0" layoutY="14.0" text="Label" />
+	</children>
+</Pane>

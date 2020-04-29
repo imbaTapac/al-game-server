@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="stats_template" type="statsTemplate"/>
+	<xs:element name="npc_templates" type="npcTemplates"/>
+	<xs:complexType name="npcTemplates">
+		<xs:sequence>
+			<xs:element name="npc_template" type="npcTemplate" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="npcTemplate">
+		<xs:sequence>
+			<xs:element name="stats" type="npcStatsTemplate" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="level" type="xs:byte" use="required"/>
+		<xs:attribute name="name_id" type="xs:int" use="required"/>
+		<xs:attribute name="title_id" type="xs:int" use="required"/>
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="rank" type="rank"/>
+		<xs:attribute name="race" type="race"/>
+		<xs:attribute name="height" type="xs:float" use="required"/>
+		<xs:attribute name="talk_distance" type="xs:int" use="required"/>
+		<xs:attribute name="npc_type" type="npcType" use="required"/>
+		<xs:attribute name="srange" type="xs:int" use="required"/>
+		<xs:attribute name="arange" type="xs:int" use="required"/>
+		<xs:attribute name="arate" type="xs:int" use="required"/>
+		<xs:attribute name="adelay" type="xs:int" use="required"/>
+		<xs:attribute name="hpgauge" type="xs:int" use="required"/>
+		<xs:attribute name="state" type="xs:int" use="required"/>
+		<xs:attribute name="talk_delay" type="xs:int" use="required"/>
+		<xs:attribute name="npc_id" type="xs:ID" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="npcStatsTemplate">
+		<xs:complexContent>
+			<xs:extension base="statsTemplate">
+				<xs:sequence/>
+				<xs:attribute name="run_speed_fight" type="xs:float" use="required"/>
+				<xs:attribute name="pdef" type="xs:int" use="required"/>
+				<xs:attribute name="mdef" type="xs:int" use="required"/>
+				<xs:attribute name="mresist" type="xs:int" use="required"/>
+				<xs:attribute name="crit" type="xs:int" use="required"/>
+				<xs:attribute name="accuracy" type="xs:int" use="required"/>
+				<xs:attribute name="power" type="xs:int" use="required"/>
+				<xs:attribute name="maxXp" type="xs:int" use="required"/>
+				<xs:attribute name="maxHp" type="xs:int" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="statsTemplate" abstract="true">
+		<xs:sequence/>
+		<xs:attribute name="maxHp" type="xs:int" use="required"/>
+		<xs:attribute name="maxMp" type="xs:int" use="required"/>
+		<xs:attribute name="walk_speed" type="xs:float" use="required"/>
+		<xs:attribute name="run_speed" type="xs:float" use="required"/>
+		<xs:attribute name="fly_speed" type="xs:float" use="required"/>
+		<xs:attribute name="attack_speed" type="xs:float" use="required"/>
+		<xs:attribute name="evasion" type="xs:int" use="required"/>
+		<xs:attribute name="block" type="xs:int" use="required"/>
+		<xs:attribute name="parry" type="xs:int" use="required"/>
+		<xs:attribute name="main_hand_attack" type="xs:int" use="required"/>
+		<xs:attribute name="main_hand_accuracy" type="xs:int" use="required"/>
+		<xs:attribute name="main_hand_crit_rate" type="xs:int" use="required"/>
+		<xs:attribute name="magic_accuracy" type="xs:int" use="required"/>
+	</xs:complexType>
+
+	<xs:simpleType name="rank">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NOVICE"/>
+			<xs:enumeration value="DISCIPLINED"/>
+			<xs:enumeration value="SEASONED"/>
+			<xs:enumeration value="EXPERT"/>
+			<xs:enumeration value="VETERAN"/>
+			<xs:enumeration value="MASTER"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="race">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ELYOS"/>
+			<xs:enumeration value="ASMODIANS"/>
+			<xs:enumeration value="LYCAN"/>
+			<xs:enumeration value="CONSTRUCT"/>
+			<xs:enumeration value="CARRIER"/>
+			<xs:enumeration value="DRAKAN"/>
+			<xs:enumeration value="LIZARDMAN"/>
+			<xs:enumeration value="TELEPORTER"/>
+			<xs:enumeration value="NAGA"/>
+			<xs:enumeration value="BROWNIE"/>
+			<xs:enumeration value="KRALL"/>
+			<xs:enumeration value="SHULACK"/>
+			<xs:enumeration value="BARRIER"/>
+			<xs:enumeration value="PC_LIGHT_CASTLE_DOOR"/>
+			<xs:enumeration value="PC_DARK_CASTLE_DOOR"/>
+			<xs:enumeration value="DRAGON_CASTLE_DOOR"/>
+			<xs:enumeration value="GCHIEF_LIGHT"/>
+			<xs:enumeration value="GCHIEF_DARK"/>
+			<xs:enumeration value="DRAGON"/>
+			<xs:enumeration value="OUTSIDER"/>
+			<xs:enumeration value="RATMAN"/>
+			<xs:enumeration value="DEMIHUMANOID"/>
+			<xs:enumeration value="UNDEAD"/>
+			<xs:enumeration value="BEAST"/>
+			<xs:enumeration value="MAGICALMONSTER"/>
+			<xs:enumeration value="ELEMENTAL"/>
+			<xs:enumeration value="LIVINGWATER"/>
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="PC_ALL"/>
+			<xs:enumeration value="DEFORM"/>
+			<xs:enumeration value="NEUT"/>
+			<xs:enumeration value="GHENCHMAN_LIGHT"/>
+			<xs:enumeration value="GHENCHMAN_DARK"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="npcType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ATTACKABLE"/>
+			<xs:enumeration value="AGGRESSIVE"/>
+			<xs:enumeration value="NON_ATTACKABLE"/>
+			<xs:enumeration value="RESURRECT"/>
+			<xs:enumeration value="POSTBOX"/>
+			<xs:enumeration value="USEITEM"/>
+			<xs:enumeration value="PORTAL"/>
+			<xs:enumeration value="CHEST"/>
+			<xs:enumeration value="ARTIFACT"/>
+			<xs:enumeration value="ARTIFACT_PROTECTOR"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
+

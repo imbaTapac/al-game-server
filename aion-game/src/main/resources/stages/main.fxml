@@ -5,13 +5,13 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aion.game.controller.LoginFormController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="373.0" prefWidth="574.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aion.game.controller.LoginFormController">
    <children>
       <Label layoutX="260.0" layoutY="132.0" prefHeight="17.0" prefWidth="73.0" text="Password" />
-      <Button layoutX="250.0" layoutY="207.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Log In" />
-      <TextField layoutX="212.0" layoutY="158.0" />
+      <Button layoutX="250.0" layoutY="207.0" mnemonicParsing="false" onAction="#startGame" prefHeight="25.0" prefWidth="73.0" text="Log In" />
+      <TextField fx:id="password" layoutX="212.0" layoutY="158.0" />
       <Label layoutX="266.0" layoutY="65.0" prefHeight="17.0" prefWidth="41.0" text="Login" />
-      <TextField layoutX="212.0" layoutY="97.0" />
+      <TextField fx:id="login" layoutX="212.0" layoutY="97.0" />
       <Label layoutX="120.0" layoutY="285.0" prefHeight="17.0" prefWidth="73.0" text="Server status" />
       <Label id="serverStatus" fx:id="serverStatus" layoutX="309.0" layoutY="285.0" prefHeight="17.0" prefWidth="41.0" />
       <Label layoutX="120.0" layoutY="320.0" prefHeight="17.0" prefWidth="84.0" text="Players online" />

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="npcs/npcs.xsd"/>
+  <xs:include schemaLocation="stats/stats.xsd"/>
+  <xs:element name="ai_static_data">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="player_stats_templates" minOccurs="0"/>
+        <xs:element ref="summon_stats_templates" minOccurs="0"/>
+        <xs:element ref="npc_templates" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<npc_templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <npc_template npc_id="216580" level="57" name="padmarashka" name_id="321801" height="15" rank="VETERAN" race="DRAGON" type="MONSTER" srange="30" arange="4" adelay="2000" arate="1000" hpgauge="27">
+        <stats maxHp="86954218" maxXp="28984739" main_hand_attack="2499" main_hand_accuracy="1251" pdef="1220" mresist="1251" power="1428" evasion="1251" accuracy="2172" walk_speed="8" run_speed="8" run_speed_fight="16"/>
+    </npc_template>
+    <npc_template npc_id="216516" level="55" name="omega" name_id="321647" height="16.5555" rank="VETERAN"  race="BEAST" srange="50" arange="2" adelay="2000" arate="1000" hpgauge="27">
+        <stats maxHp="17626351" maxXp="12043" main_hand_attack="2370" main_hand_accuracy="1213" pdef="1180" mresist="1213" power="1380" evasion="1213" accuracy="2100" walk_speed="4" run_speed="8" run_speed_fight="35"/>
+    </npc_template>
+</npc_templates>

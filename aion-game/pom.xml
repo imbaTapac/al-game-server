@@ -14,11 +14,39 @@
 	<groupId>com.aion.game</groupId>
 	<artifactId>aion-game</artifactId>
 	<version>1.0.0</version>
+	<packaging>jar</packaging>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.aion.server</groupId>
+			<artifactId>aion-server</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.aion.commons</groupId>
+			<artifactId>aion-commons</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.zenjava</groupId>
+				<artifactId>javafx-maven-plugin</artifactId>
+				<version>8.8.3</version>
+				<configuration>
+					<mainClass>com.aion.game.GameClient</mainClass>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>

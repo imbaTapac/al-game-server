@@ -8,16 +8,29 @@
 		<version>1.0.0</version>
 		<relativePath>../aion-parent/pom.xml</relativePath>
 	</parent>
+
 	<modelVersion>4.0.0</modelVersion>
-
-	<groupId>com.aion.parent</groupId>
+	<groupId>com.aion.server</groupId>
 	<artifactId>aion-server</artifactId>
-
+	<packaging>jar</packaging>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 		</dependency>
-	</dependencies>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+		</dependency>
+        <dependency>
+            <groupId>aion-commons</groupId>
+            <artifactId>aion-commons</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
 </project>
